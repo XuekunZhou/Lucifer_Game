@@ -15,25 +15,62 @@ public class LuciferSpel {
         return aantal <= 0;
     }
 
+//    private void doeSpelerZet(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Hoeveel lucifers wil je pakken?");
+//        int pakken = scanner.nextInt();
+//        pakken = Math.min(3,Math.max(1,pakken));
+//        aantal -= pakken;
+//        System.out.printf("De speler pakt %d lucifers%n", pakken);
+//    }
+
+    // Testalgoritme automatiseren
     private void doeSpelerZet(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hoeveel lucifers wil je pakken?");
-        int pakken = scanner.nextInt();
-        pakken = Math.min(3,Math.max(1,pakken));
+        int pakken = new TestAlgoritme().doeZet(aantal);
         aantal -= pakken;
-        System.out.printf("De speler pakt %d lucifers%n", pakken);
+//        System.out.printf("De speler pakt %d lucifers%n", pakken);
     }
 
+
+//    public void doeComputerZet(){
+//        int pakken = algoritme.doeZet(aantal);
+//        aantal -=pakken;
+//        System.out.printf("De computer pakt %d lucifers%n", pakken);
+//    }
+
+    // Teks weghalen zodat de console wat netter is
     public void doeComputerZet(){
         int pakken = algoritme.doeZet(aantal);
         aantal -=pakken;
-        System.out.printf("De computer pakt %d lucifers%n", pakken);
+//        System.out.printf("De computer pakt %d lucifers%n", pakken);
     }
 
+//    public void startSpel(boolean spelerBegint) {
+//        boolean spelerAanBeurt = spelerBegint;
+//        while (!afgelopen()) {
+//            System.out.printf("Er liggen nog %d lucifers%n", aantal);
+//            if (spelerAanBeurt) {
+//                doeSpelerZet();
+//
+//            }
+//            else {
+//                doeComputerZet();
+//            }
+//            spelerAanBeurt = !spelerAanBeurt;
+//        }
+//        if (spelerAanBeurt){
+//            System.out.println("Speler heeft gewonnen");
+//        }
+//        else{
+//            System.out.println("Computer heeft gewonnen");
+//        }
+//    }
+
+    // Teks weghalen zodat de console wat netter is
     public void startSpel(boolean spelerBegint) {
         boolean spelerAanBeurt = spelerBegint;
         while (!afgelopen()) {
-            System.out.printf("Er liggen nog %d lucifers%n", aantal);
+            // System.out.printf("Er liggen nog %d lucifers%n", aantal);
             if (spelerAanBeurt) {
                 doeSpelerZet();
 
