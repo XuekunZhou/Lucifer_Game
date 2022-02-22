@@ -1,10 +1,12 @@
 public class VerstandigeAlgoritme implements LuciferAlgoritme{
     @Override
     public int doeZet(int aantal) {
-        return switch (aantal) {
-            case 15, 11, 7, 3 -> 2;
-            case 12, 8, 4 -> 3;
-            default -> 1;
-        };
+        int max = 3; // Maximaal aantal lucifers die je per zet mag verwijderen
+        int zet = (aantal - 1) % (max + 1);
+
+        if (zet == 0)
+            return 1;
+
+        return zet;
     }
 }
